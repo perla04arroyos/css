@@ -1,0 +1,57 @@
+#boton{
+    display: block;
+    padding: 20px;
+    background-color: lightblue;
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border: 5px solid gray;
+    transition: border 500ms, background 3s, border-radius 1s;
+}
+
+#boton:hover{
+    border-radius: 15px;
+    background-color: lightpink;
+    border: 5px solid gray;
+}
+
+#caja{
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    background-color: lightseagreen;
+    color: white;
+    border: 5px solid gray;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+    animation-name: desplazamiento;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes desplazamiento{
+    0%{
+        margin-left: 0px;
+        transform: rotate(0deg);       
+    }
+    75%{
+        background-color: lightsalmon;
+    }
+    77%{
+        border: 10px dashed black;
+    }
+    50%{
+        margin-left: 1000px;
+        transform: rotate(360deg);
+        border-radius: 999px;
+    }
+    100%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+}

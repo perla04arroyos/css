@@ -1,0 +1,47 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul li{
+    font-size: 20px;
+}
+
+ul li:first-child{
+    color: purple;
+}
+
+ul li:nth-child(2) {
+    color: lightcoral;
+    font-weight: bold;
+}
+
+ul li:last-child{
+    color: lightsalmon;
+    font-weight: bold;
+}
+
+#mi-enlace{
+    font-size: 20px;
+    color: lightseagreen;
+}
+#mi-enlace:link{
+    color: blueviolet;
+}
+#mi-enlace:visited{
+    color: lightslategray;
+}
+#mi-enlace:hover{
+    color: lightseagreen;
+}
+#mi-enlace:active{
+    color:blueviolet;
+}
+
+input[type="text"]{
+    margin-top: 20px;
+    padding: 10px;
+}
+input[type="text"]:focus{
+    border: 4px solid lightseagreen;
+}
+

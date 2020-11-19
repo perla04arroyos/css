@@ -1,0 +1,62 @@
+//Compilar -> lessc estilos.less styles.css
+//Variables
+@bgcolor: lightblue;
+@fuente: Arial;
+@b:  body;
+
+@{b}{
+    background-color: @bgcolor;
+}
+
+h1{
+    font-family: @fuente;
+}
+
+//Anidacion
+.info{
+    ul{
+        a{
+            color: #333;
+            font-size: 18px;
+        }
+    }
+}
+
+//Mixins
+.sombras(@size){
+    background-color: #eeeeee;
+    box-shadow: 0px 0px @size gray;
+    text-shadow: 0px 0px @size gray;
+    border-radius: @size;
+    padding: @size;
+}
+
+.info{
+    .sombras(5px);
+}
+
+//Operador
+h1{
+    font-size: 30px + 7px;
+}
+
+//Mixins Condicionales
+.textoNegro(@value) when (@value=true){
+    color: black;
+}
+
+h1{
+    color: lightseagreen;
+    .textoNegro(true);
+}
+
+//Bucles
+.loop(@cont) when (@cont > 0){
+    .loop((@cont - 1));
+    height: ((900px /  @cont));
+}
+
+.info{
+    height: 900px;
+    .loop(5);
+}
